@@ -15,7 +15,6 @@
           {"nm": "CharSkyKid_Feet_AP31Clogs", "cst": 1, "season": false, "level": 3, "exp": "4", "image": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/4/4c/Sky-app-icon-2020-1.jpg"},
           {"nm": "CharSkyKid_Hat_AP31FloppyHat", "cst": 0, "season": true, "level": 4, "exp": "0", "image": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/4/4c/Sky-app-icon-2020-1.jpg"},
           {"nm": "CharSkyKid_Wing_AP31RedCape", "cst": 1, "season": false, "level": 4, "exp": "10", "image": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/4/4c/Sky-app-icon-2020-1.jpg"},
-          {"nm": "先祖任務", "cst": 0, "season": false, "level": 4, "exp": "0", "image": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/2/26/Spirit-relationship-icon.png"},
           {"nm": "季心", "cst": 3, "season": true, "level": 5, "exp": "0", "image": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/4/4c/Sky-app-icon-2020-1.jpg"},
           {"nm": "陪伴先祖", "cst": 0,"season":false,"level":1,"exp":"0", "image":"https://static.wikia.nocookie.net/sky-children-of-the-light/images/3/35/Spirit-relationship-follow-icon.png"}
               ]
@@ -33,7 +32,6 @@
           {"nm": "動作04", "cst": 0, "season": true, "level": 4, "exp": "0", "image": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/4/4c/Sky-app-icon-2020-1.jpg"},
           {"nm": "CharSkyKid_Hat_AP31Postman", "cst": 0, "season": true, "level": 3, "exp": "0", "image": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/4/4c/Sky-app-icon-2020-1.jpg"},
           {"nm": "CharSkyKid_Prop_AP31IrisVase", "cst": 1, "season": false, "level": 4, "exp": "10", "image": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/4/4c/Sky-app-icon-2020-1.jpg"},
-          {"nm": "先祖任務", "cst": 0, "season": false, "level": 4, "exp": "0", "image": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/2/26/Spirit-relationship-icon.png"},
           {"nm": "CharSkyKid_Wing_AP31Postman", "cst": 0, "season": true, "level": 4, "exp": "0", "image": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/4/4c/Sky-app-icon-2020-1.jpg"},
           {"nm": "季心", "cst": 3, "season": true, "level": 5, "exp": "0", "image": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/4/4c/Sky-app-icon-2020-1.jpg"},
           {"nm": "陪伴先祖", "cst": 0,"season":false,"level":1,"exp":"0", "image":"https://static.wikia.nocookie.net/sky-children-of-the-light/images/3/35/Spirit-relationship-follow-icon.png"}
@@ -52,7 +50,6 @@
           {"nm": "魔法", "cst": 1, "season": false, "level": 3, "exp": "4", "image": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/4/4c/Sky-app-icon-2020-1.jpg"},
           {"nm": "CharSkyKid_Body_AP31WorkerDress", "cst": 0, "season": true, "level": 3, "exp": "0", "image": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/4/4c/Sky-app-icon-2020-1.jpg"},
           {"nm": "藍色染料", "cst": 1, "season": false, "level": 4, "exp": "10", "image": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/4/4c/Sky-app-icon-2020-1.jpg"},
-          {"nm": "先祖任務", "cst": 0, "season": false, "level": 4, "exp": "0", "image": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/2/26/Spirit-relationship-icon.png"},
           {"nm": "CharSkyKid_Hair_AP31Bonnet", "cst": 0, "season": true, "level": 4, "exp": "0", "image": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/4/4c/Sky-app-icon-2020-1.jpg"},
           {"nm": "季心", "cst": 3, "season": true, "level": 5, "exp": "0", "image": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/4/4c/Sky-app-icon-2020-1.jpg"},
           {"nm": "陪伴先祖", "cst": 0,"season":false,"level":1,"exp":"0", "image":"https://static.wikia.nocookie.net/sky-children-of-the-light/images/3/35/Spirit-relationship-follow-icon.png"}
@@ -71,8 +68,8 @@
           {"nm": "動作04", "cst": 0, "season": true, "level": 4, "exp": "0", "image": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/4/4c/Sky-app-icon-2020-1.jpg"},
           {"nm": "CharSkyKid_Prop_AP31SunflowerVase", "cst": 1, "season": false, "level": 3, "exp": "4", "image": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/4/4c/Sky-app-icon-2020-1.jpg"},
           {"nm": "CharSkyKid_Hat_AP31BlueFur", "cst": 1, "season": false, "level": 4, "exp": "10", "image": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/4/4c/Sky-app-icon-2020-1.jpg"},
-          {"nm": "先祖任務", "cst": 0, "season": false, "level": 4, "exp": "0", "image": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/2/26/Spirit-relationship-icon.png"},
-          {"nm": "陪伴先祖", "cst": 0,"season":false,"level":1,"exp":"0", "image":"https://static.wikia.nocookie.net/sky-children-of-the-light/images/3/35/Spirit-relationship-follow-icon.png"}
+          {"nm": "陪伴先祖", "cst": 0,"season":false,"level":1,"exp":"0", "image":"https://static.wikia.nocookie.net/sky-children-of-the-light/images/3/35/Spirit-relationship-follow-icon.png"},
+          {"nm": "季心", "cst": 3, "season": true, "level": 5, "exp": "0", "image": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/4/4c/Sky-app-icon-2020-1.jpg"}
               ]
       }
     },
