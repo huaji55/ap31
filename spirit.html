@@ -493,7 +493,12 @@ function updateUI(){
             
             Object.keys(spiritGroups).forEach(sID => {
                 const itemsInspirit = spiritGroups[sID];
-                rowCount += Math.ceil(itemsInspirit.length / ITEMS_PER_ROW);
+                const ns = itemsInspirit.filter(i=>!i.season).length;
+const ss = itemsInspirit.filter(i=>i.season).length;
+const nonSeasonRows = ns > 0 ? Math.ceil(ns / ITEMS_PER_ROW) : 0;
+// 第一個季節併入非季節最後一列，其餘各佔一列
+const seasonRows = ss > 0 ? (ns > 0 ? ss - 1 : ss) : 0;
+rowCount += nonSeasonRows + seasonRows;
             });
             
             if (rowCount > maxRowsPerLevel[lv]) {
@@ -592,30 +597,48 @@ function updateUI(){
                     const itemsInspirit = spiritGroups[sID];
                     const nonSeason = itemsInspirit.filter(i=>!i.season);
                     const season = itemsInspirit.filter(i=>i.season);
-                    const orderedItems = [...nonSeason, ...season];
 
-                    for(let i=Math.floor((orderedItems.length-1)/ITEMS_PER_ROW)*ITEMS_PER_ROW; i>=0; i-=ITEMS_PER_ROW){
-                        const slice = orderedItems.slice(i, i+ITEMS_PER_ROW);
+                    // 非季節：每列最多 ITEMS_PER_ROW 個，靠左
+                    for(let i=Math.floor((nonSeason.length-1)/ITEMS_PER_ROW)*ITEMS_PER_ROW; i>=0; i-=ITEMS_PER_ROW){
+                        const slice = nonSeason.slice(i, i+ITEMS_PER_ROW);
                         const innerRow = document.createElement('div');
                         innerRow.className='items-row';
-                        
-                        let nonSeasonCount = 0;
-                        let firstSeasonItemDiv = null; 
-
                         slice.forEach(item=>{
-                            const itemDiv = createItemDiv(item, spiritItems, spiritKey, t); 
-                            innerRow.appendChild(itemDiv);
-                            if (!item.season) nonSeasonCount++;
-                            else if (!firstSeasonItemDiv) firstSeasonItemDiv = itemDiv; 
+                            innerRow.appendChild(createItemDiv(item, spiritItems, spiritKey, t));
                         });
-
-                        if (nonSeasonCount > 0 && nonSeasonCount < slice.length && firstSeasonItemDiv) {
-                            firstSeasonItemDiv.style.marginLeft = 'auto'; 
-                        } else if (nonSeasonCount === 0 && slice.length > 0) {
-                            innerRow.style.justifyContent = 'flex-end';
-                        }
                         levelRowWrapper.insertBefore(innerRow, levelRowWrapper.firstChild);
                         actualRowsRendered++;
+                    }
+
+                    // 先存好非季節最後一列的參考，之後 insertBefore 會改變 firstChild
+                    const nonSeasonLastRow = nonSeason.length > 0 ? levelRowWrapper.firstChild : null;
+
+                    if(nonSeasonLastRow){
+                        // season[0] 併入非季節那列
+                        if(season.length > 0){
+                            const s0div = createItemDiv(season[0], spiritItems, spiritKey, t);
+                            s0div.style.marginLeft = 'auto'; // ← 加這行，靠右對齊
+                            nonSeasonLastRow.appendChild(s0div);
+                    }
+                        // season[1..n] 各自一列，插在 label 前（正向插入，index 越大越靠近 label = 視覺越上方）
+                        for(let i=1; i<season.length; i++){
+                            const innerRow = document.createElement('div');
+                            innerRow.className='items-row';
+                            innerRow.style.justifyContent = 'flex-end';
+                            innerRow.appendChild(createItemDiv(season[i], spiritItems, spiritKey, t));
+                            levelRowWrapper.insertBefore(innerRow, label);
+                            actualRowsRendered++;
+                        }
+                    } else {
+                        // 沒有非季節，所有季節各自一列，同樣插在 label 前
+                        for(let i=0; i<season.length; i++){
+                            const innerRow = document.createElement('div');
+                            innerRow.className='items-row';
+                            innerRow.style.justifyContent = 'flex-end';
+                            innerRow.appendChild(createItemDiv(season[i], spiritItems, spiritKey, t));
+                            levelRowWrapper.insertBefore(innerRow, label);
+                            actualRowsRendered++;
+                        }
                     }
                 });
             } else {
